@@ -6,7 +6,7 @@ TODO check if these two could be merged into one higher order macro.
 Hugo Hörnquist -- 2017-06-02
 |#
 
-(define-module (macros doto)
+(define-module (macros arrow)
   #:export (-> ->>))
 
 (define-syntax ->
