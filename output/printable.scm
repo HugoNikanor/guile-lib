@@ -2,6 +2,8 @@
                #:use-module (ice-9 format)
                #:export (define-printable))
 
+;;; TODO
+;;; This currently doesn't work with functions which have rest terms
 
 ;; Makes a function which displays a signature of itself whenever it's called"
 ;; Alsa, docstrings didn't work on define-syntax
