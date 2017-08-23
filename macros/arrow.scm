@@ -7,7 +7,7 @@ Hugo Hörnquist -- 2017-06-02
 |#
 
 (define-module (macros arrow)
-  #:export (-> ->>))
+  #:export (-> ->> -#> -#>>))
 
 (define-syntax ->
   (syntax-rules ()
@@ -26,3 +26,13 @@ Hugo Hörnquist -- 2017-06-02
      (->> (func args ... obj) rest ...))
     ((->> obj func rest ...)
      (->> (func obj) rest ...))))
+
+(define-syntax -#>
+  (syntax-rules ()
+    ((-#> init-fun func ...)
+     (-> (init-fun) func ...))))
+
+(define-syntax -#>>
+  (syntax-rules ()
+    ((-#>> init-fun func ...)
+     (->> (init-fun) func ...))))
