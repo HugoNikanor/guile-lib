@@ -19,6 +19,11 @@
                      (list-ref ,symb ,n)))
                 (iota (length bindings))))))
 
+#|
+(let-multiple (a b) (1 2)
+              (+ a b))
+=> 3
+|#
 (define-syntax let-multiple
   (syntax-rules ()
     ((_ bindings expr
