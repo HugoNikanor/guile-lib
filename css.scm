@@ -1,6 +1,13 @@
 (define-module (css)
                #:export (scss->css))
 
+;;; This module is compleatly broken.
+;;; It should probably be removed from my collection of
+;;; simple guile moduules. Since it's both just a simple
+;;; sexp -> css converter, but if I add an css -> sexp
+;;; then it gets to large, and would be better of as its
+;;; own proper module.
+
 (define* (->string displayable
             #:optional (dispfunc display))
   (with-output-to-string
